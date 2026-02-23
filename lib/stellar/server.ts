@@ -1,5 +1,3 @@
-'use server';
-
 /**
  * Server-only utilities for Stellar operations
  * This file is only executed on the server and should never be imported in client components
