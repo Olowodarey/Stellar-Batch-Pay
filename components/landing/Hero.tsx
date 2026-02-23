@@ -20,7 +20,7 @@ export const Hero = () => {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6 }}
-                            className="text-6xl md:text-[60px] font-extrabold tracking-tight text-white leading-[1.1]"
+                            className="text-4xl md:text-[60px] font-extrabold tracking-tight text-white leading-[1.1]"
                         >
                             Send Hundreds of <br />
                             <span className="text-[#00D4AA] drop-shadow-[0_0_30px_rgba(0,212,170,0.3)]">Crypto Payments</span> <br />
