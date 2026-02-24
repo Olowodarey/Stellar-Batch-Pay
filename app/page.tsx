@@ -10,7 +10,11 @@ import CryptoPaymentSection from "@/components/cryptopay-section";
 import { Navbar } from "@/components/landing/navbar";
 import { ProcessSection } from "@/components/landing/process-section";
 import { SecuritySection } from "@/components/landing/security-section";
+<<<<<<< HEAD
 import { PaymentWorkflowsSection } from "@/components/payment-workflows-section";
+=======
+import { MissionSection } from "@/components/landing/mission-section";
+>>>>>>> upstream/main
 import { WhyTeamsChooseBatchPay } from "@/components/landing/WhyTeamsChooseBatchPay";
 
 export default function LandingPage() {
@@ -24,9 +28,16 @@ export default function LandingPage() {
       <FeatureSection />
       <BlockchainFeaturesSection />
       <SecuritySection />
+<<<<<<< HEAD
       <PaymentWorkflowsSection />
       <CryptoPaymentSection />
       <CtaSection />{" "}
+=======
+      <MissionSection />
+      <CryptoPaymentSection />
+      <CtaSection />
+
+>>>>>>> upstream/main
       <footer className="py-12 border-t mt-auto bg-secondary/10">
         <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="text-sm text-muted-foreground">
