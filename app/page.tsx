@@ -11,6 +11,7 @@ import { Navbar } from "@/components/landing/navbar";
 import { ProcessSection } from "@/components/landing/process-section";
 import { SecuritySection } from "@/components/landing/security-section";
 import { MissionSection } from "@/components/landing/mission-section";
+import { WhyTeamsChooseBatchPay } from "@/components/landing/WhyTeamsChooseBatchPay";
 
 export default function LandingPage() {
   return (
@@ -18,6 +19,7 @@ export default function LandingPage() {
       <Navbar />
       <Hero />
       <ProcessSection />
+      <WhyTeamsChooseBatchPay />
       <HowItWorks />
       <FeatureSection />
       <BlockchainFeaturesSection />
