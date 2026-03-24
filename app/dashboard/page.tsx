@@ -1,57 +1,13 @@
 "use client"
 
-import { motion } from "framer-motion"
-import { 
-  ArrowUpRight, 
-  Wallet, 
-  CheckCircle2, 
-  Clock, 
-  ChevronDown,
-  Plus
-} from "lucide-react"
+import { ChevronDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { cn } from "@/lib/utils"
 import { SummaryCard } from "@/components/dashboard/SummaryCard"
 import { ActionCard } from "@/components/dashboard/ActionCard"
 import { TipsCard } from "@/components/dashboard/TipsCard"
 import { RecentBatchesTable } from "@/components/dashboard/RecentBatchesTable"
-
-const stats = [
-  {
-    title: "Total Payments",
-    value: "24,567",
-    change: "+12.5%",
-    icon: ArrowUpRight,
-    iconBg: "bg-teal-500/20",
-    iconColor: "text-teal-500",
-  },
-  {
-    title: "Total Amount Sent",
-    value: "$1.2M",
-    change: "+8.2%",
-    icon: Wallet,
-    iconBg: "bg-blue-500/20",
-    iconColor: "text-blue-500",
-  },
-  {
-    title: "Success Rate",
-    value: "98.7%",
-    change: "+2.1%",
-    icon: CheckCircle2,
-    iconBg: "bg-green-500/20",
-    iconColor: "text-green-500",
-  },
-  {
-    title: "Active Batches",
-    value: "12",
-    change: "Live",
-    icon: Clock,
-    iconBg: "bg-purple-500/20",
-    iconColor: "text-purple-500",
-  },
-]
+import { OverviewMetrics } from "@/components/dashboard/overview-metrics"
 
 
 export default function DashboardPage() {
@@ -63,34 +19,8 @@ export default function DashboardPage() {
         <p className="text-gray-400">Monitor your batch payment operations and performance</p>
       </div>
 
-      {/* Stats Grid */}
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-        {stats.map((stat, i) => (
-          <motion.div
-            key={stat.title}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: i * 0.1 }}
-          >
-            <Card className="border-[#1F2937] bg-[#121827] shadow-lg">
-              <CardContent className="p-6">
-                <div className="flex items-center justify-between">
-                  <div className={cn("flex h-10 w-10 items-center justify-center rounded-lg", stat.iconBg)}>
-                    <stat.icon className={cn("h-5 w-5", stat.iconColor)} />
-                  </div>
-                  <span className={cn("text-xs font-medium", stat.change === "Live" ? "text-purple-400" : "text-teal-400")}>
-                    {stat.change}
-                  </span>
-                </div>
-                <div className="mt-4 space-y-1">
-                  <p className="text-sm font-medium text-gray-400">{stat.title}</p>
-                  <p className="text-2xl font-bold text-white">{stat.value}</p>
-                </div>
-              </CardContent>
-            </Card>
-          </motion.div>
-        ))}
-      </div>
+      {/* Overview Metrics */}
+      <OverviewMetrics />
 
       <div className="grid gap-8 lg:grid-cols-3">
         {/* Transaction Actions Column */}
