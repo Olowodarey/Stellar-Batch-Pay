@@ -1,40 +1,44 @@
 "use client"
 
-import { Send, Coins, CheckCircle, Clock } from "lucide-react"
-import { MetricCard, MetricCardProps } from "./metric-card"
+import Image from "next/image"
+import { MetricCard } from "./metric-card"
 
-const metricsData: Omit<MetricCardProps, "index">[] = [
+interface MetricData {
+  title: string
+  value: string
+  change: string
+  icon: string
+  iconBg: string
+}
+
+const metricsData: MetricData[] = [
   {
     title: "Total Payments",
     value: "24,567",
     change: "+12.5%",
-    icon: Send,
+    icon: "/tel.svg",
     iconBg: "bg-teal-500/20",
-    iconColor: "text-teal-500",
   },
   {
     title: "Total Amount Sent",
     value: "$1.2M",
     change: "+8.2%",
-    icon: Coins,
+    icon: "/processing.svg",
     iconBg: "bg-blue-500/20",
-    iconColor: "text-blue-500",
   },
   {
     title: "Success Rate",
     value: "98.7%",
     change: "+2.1%",
-    icon: CheckCircle,
+    icon: "/check.svg",
     iconBg: "bg-green-500/20",
-    iconColor: "text-green-500",
   },
   {
     title: "Active Batches",
     value: "12",
     change: "Live",
-    icon: Clock,
+    icon: "/clock.svg",
     iconBg: "bg-purple-500/20",
-    iconColor: "text-purple-500",
   },
 ]
 

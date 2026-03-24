@@ -1,7 +1,7 @@
 "use client"
 
+import Image from "next/image"
 import { motion } from "framer-motion"
-import { LucideIcon } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import { cn } from "@/lib/utils"
 
@@ -9,9 +9,8 @@ export interface MetricCardProps {
   title: string
   value: string
   change: string
-  icon: LucideIcon
+  icon: string
   iconBg: string
-  iconColor: string
   index?: number
 }
 
@@ -19,9 +18,8 @@ export function MetricCard({
   title,
   value,
   change,
-  icon: Icon,
+  icon,
   iconBg,
-  iconColor,
   index = 0,
 }: MetricCardProps) {
   const isLiveIndicator = change === "Live"
@@ -41,7 +39,13 @@ export function MetricCard({
                 iconBg
               )}
             >
-              <Icon className={cn("h-5 w-5", iconColor)} />
+              <Image
+                src={icon}
+                alt={title}
+                width={20}
+                height={20}
+                className="w-5 h-5"
+              />
             </div>
             <span
               className={cn(
