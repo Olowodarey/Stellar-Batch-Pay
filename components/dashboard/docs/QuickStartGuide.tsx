@@ -66,8 +66,8 @@ export function QuickStartGuide() {
             return (
               <div key={step.number} className="flex gap-4">
                 <div className="flex-shrink-0">
-                  <div className="w-10 h-10 rounded-full bg-emerald-500/20 flex items-center justify-center">
-                    <span className="text-emerald-400 font-semibold">
+                  <div className="w-10 h-10 rounded-full bg-emerald-400 flex items-center justify-center">
+                    <span className="text-gray-900 font-semibold">
                       {step.number}
                     </span>
                   </div>
